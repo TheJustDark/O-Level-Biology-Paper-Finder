@@ -13,7 +13,7 @@ O-Level-Biology-Paper-Finder/
 ├── .gitignore                   # Prevents massive PDF folders from uploading to Git
 ├── Cleanup_and_Inventory.py     # Parses filenames and updates the database
 ├── GUI_Answer.py                # Main user interface (Run this to search papers)
-├── Success.py                   # Scraping engine to download new papers
+├── Scrapper.py                   # Scraping engine to download new papers
 └── inventory.json               # Local database mapping the papers (auto-updated)
 
 Setup and Installation
