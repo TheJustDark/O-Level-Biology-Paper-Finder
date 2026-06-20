@@ -1,7 +1,7 @@
 O-Level Biology Past Paper Finder (Syllabus 5090)
 A desktop utility designed to streamline the study and revision process for Cambridge O-Level Biology (5090). This application automatically downloads past papers from PapaCambridge, indexes them dynamically, and provides a clean graphical user interface (GUI) to locate and open Question Papers (QP) and Mark Schemes (MS) side-by-side with just a few clicks.
 Features
-- **Automated Crawler & Scraper (`Success.py`)**: Uses Undetected Chromedriver and requests sessions to bypass security challenges and download past papers for specified year ranges.
+- **Automated Crawler & Scraper (`Scrapper.py`)**: Uses Undetected Chromedriver and requests sessions to bypass security challenges and download past papers for specified year ranges.
 - **Background Auto-Sync**: The GUI automatically triggers the cataloging logic on startup. It scans the downloaded folder, verifies file integrity, pairs QPs with MSs, and updates the local JSON database without manual command-line intervention.
 - **Dynamic Cascade Dropdowns**: Select a Year, and the Session dropdown dynamically updates. Select a Session, and only the published Variants for that specific exam are shown. This prevents search errors.
 - **Cross-Platform PDF Launcher**: Opens selected documents automatically using your system's default PDF viewer on Windows, macOS, or Linux.
