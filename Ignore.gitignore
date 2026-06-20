@@ -1,0 +1,6 @@
+# Ignore the downloaded papers folder
+papers/
+
+# Ignore python cache files
+__pycache__/
+*.pyc
