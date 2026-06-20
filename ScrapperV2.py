@@ -45,7 +45,8 @@ except ImportError:
     import requests
 
 # ── Configuration ─────────────────────────────────────────────────────────────
-OUTPUT_DIR = "papers"
+# This will be overridden dynamically by user input at execution time
+OUTPUT_DIR = "papers" 
 DELAY_ON_SUCCESS = 1.0  # Pause after a successful download to avoid rate limits
 BASE_URL = "https://pastpapers.papacambridge.com/papers/caie/o-level-biology-5090?theme=lightTheme"
 
@@ -437,6 +438,18 @@ if __name__ == "__main__":
     print("=" * 60)
     print("  BioSearch — 5090 Dynamic Crawler & Downloader")
     print("=" * 60)
+
+    # Ask user for the parent folder where 'papers' should be created
+    print("📂 Configure Save Location:")
+    user_input = input("Enter the path to the directory where the 'papers' folder should be created\n(Leave blank and press Enter to save in the current script folder): ").strip()
+    
+    if user_input:
+        parent_dir = os.path.abspath(user_input)
+        OUTPUT_DIR = os.path.join(parent_dir, "papers")
+    else:
+        OUTPUT_DIR = os.path.abspath("papers")
+
+    print(f"📍 The 'papers' folder will be located at: {OUTPUT_DIR}\n")
 
     driver = init_driver()
     try:
